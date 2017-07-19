@@ -123,7 +123,7 @@
             android:layout_marginTop="16dp"
             android:layout_weight="0.12"
             android:background="#13b586"
-            android:onClick="onClickStuLogin"
+            android:onClick="onClick"
             android:text="Login"
             android:textColor="#fff"
             android:textSize="24sp" />

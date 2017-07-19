@@ -48,8 +48,9 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="Name"
-            android:inputType="textPersonName" />
-
+            android:inputType="textPersonName"
+            android:text="@string/nm" />
+s
         <EditText
             android:id="@+id/editName"
             android:layout_width="match_parent"
@@ -58,7 +59,8 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="Enrollment No"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:text="@string/en" />
 
         <EditText
             android:layout_width="match_parent"
@@ -66,7 +68,9 @@
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:ems="10"
-            android:hint="Contact No" />
+            android:id="@+id/editcon"
+            android:hint="Contact No"
+            android:text="@string/contact"/>
 
         <EditText
             android:layout_width="match_parent"
@@ -75,13 +79,16 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="Email Id"
-            android:inputType="textPersonName" />
+            android:id="@+id/editemail"
+            android:inputType="textEmailAddress"
+            android:text="@string/email"/>
 
         <Button
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="OnClickDBInsert"
             android:text="Submit" />
     </LinearLayout>
 </LinearLayout>

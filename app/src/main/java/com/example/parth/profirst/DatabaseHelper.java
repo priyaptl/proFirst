@@ -5,6 +5,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.EditText;
+import android.widget.TextView;
 
 /**
  * Created by parth on 19/7/17.
@@ -21,9 +23,12 @@ public class DatabaseHelper extends SQLiteOpenHelper
     public static final String col3 = "EMAIL";
     public static final String col4 = "CONTACT";
 
+    Context on;
     public  DatabaseHelper(Context context)
     {
+
         super(context,dbname,null,1);
+        on=context;
         SQLiteDatabase db = this.getWritableDatabase();
     }
     @Override
@@ -36,13 +41,14 @@ public class DatabaseHelper extends SQLiteOpenHelper
         db.execSQL("DROP TABLE IF EXISTS "+tablename);
     }
 
-    public boolean insertData()//(String c1,String c2,String c3,String c4)
+    public boolean insertData(String a,String b,String c,String d)//(String c1,String c2,String c3,String c4)
     {
         SQLiteDatabase db =this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(col2,"Parth");
-        contentValues.put(col3,"parth@shah.com");
-        contentValues.put(col4,"8866688666");
+
+        contentValues.put(col2,a);
+        contentValues.put(col3,c);
+        contentValues.put(col4,d);
         long result =db.insert(tablename,null,contentValues);
         db.close();
 

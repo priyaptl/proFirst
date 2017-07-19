@@ -5,16 +5,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import java.io.Serializable;
 
 public class StudentLogin extends AppCompatActivity implements View.OnClickListener{
 
-
+    DatabaseHelper myDb=null;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_student_login);
-        DatabaseHelper myDb = new DatabaseHelper(this);
-        boolean var= myDb.insertData();
+        myDb = new DatabaseHelper(this);
+
+
         TextView t1= (TextView) findViewById(R.id.reg);
         t1.setOnClickListener(this);
 
@@ -23,6 +28,7 @@ public class StudentLogin extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         Intent a = new Intent(StudentLogin.this , StudentReg.class);
+        a.putExtra("data",myDb.getClass());
 
         startActivity(a);
     }

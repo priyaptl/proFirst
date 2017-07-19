@@ -22,6 +22,9 @@
         <activity android:name=".AdminLogin" />
         <activity android:name=".StudentQR" />
         <activity android:name=".StudentDetails" />
+        <activity android:name=".Activity1" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Splashscreen" />
     </application>
 
 </manifest>
