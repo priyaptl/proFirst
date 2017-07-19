@@ -123,9 +123,10 @@
             android:layout_marginTop="16dp"
             android:layout_weight="0.12"
             android:background="#13b586"
-            android:text="submit"
+            android:onClick="onClickStuLogin"
+            android:text="Login"
             android:textColor="#fff"
-            android:textSize="13dp" />
+            android:textSize="24sp" />
 
     </LinearLayout>
 

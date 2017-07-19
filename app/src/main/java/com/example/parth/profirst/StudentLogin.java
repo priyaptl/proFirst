@@ -26,4 +26,9 @@ public class StudentLogin extends AppCompatActivity implements View.OnClickListe
 
         startActivity(a);
     }
+
+    public void onClickStuLogin(View view){
+        Intent a = new Intent(StudentLogin.this , StudentProfile.class);
+        startActivity(a);
+    }
 }
