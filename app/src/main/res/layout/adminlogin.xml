@@ -22,7 +22,7 @@
 
         <ImageView android:layout_width="40dp"
             android:layout_height="40dp"
-            android:background="@drawable/app_icon"
+            android:background="@drawable/ic_launcher"
             android:layout_marginLeft="10dp"
             tools:ignore="RtlHardcoded" />
 
@@ -56,7 +56,7 @@
             android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="15dp"
-            android:background="@drawable/app_icon" />
+            android:background="@drawable/admin" />
 
         <EditText android:layout_width="fill_parent"
             android:layout_height="40dp"
@@ -81,6 +81,7 @@
             android:layout_marginTop="16dp"
             android:layout_weight="0.12"
             android:background="#13b586"
+            android:onClick="OnClickAdminLogin"
             android:text="Login"
             android:textColor="#fff"
             android:textSize="13dp" />

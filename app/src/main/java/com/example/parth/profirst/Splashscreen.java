@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
-//import com.androidmkab.randomsplash.MainActivity;
+
 
 import java.util.Random;
 

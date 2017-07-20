@@ -14,7 +14,7 @@ public class StudentProfile extends AppCompatActivity {
     }
 
     public void onClickMyQr(View view){
-        Intent a = new Intent(StudentProfile.this , StudentQR.class);
+        Intent a = new Intent(StudentProfile.this , MainActivity.class);
         startActivity(a);
     }
 

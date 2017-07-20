@@ -25,7 +25,7 @@
 
         <TextView android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Student Name"
+            android:text="Admin Name"
             android:textColor="#ffffff"
             android:layout_marginLeft="25dp"
             android:textSize="18sp"
@@ -58,29 +58,7 @@
         android:orientation="vertical"
         android:layout_weight="0.07">
 
-        <TextView
-            android:id="@+id/result_textview"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/no_barcode_captured"
-            android:textSize="22sp"
-            android:freezesText="true"
-            android:layout_centerVertical="true"
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/activity_vertical_margin"/>
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:height="100dp"
-            android:background="@android:color/holo_green_light"
-            android:onClick="onClickMyQr"
-            android:text="My QR"
-            android:textAppearance="@style/TextAppearance.AppCompat.Widget.Button"
-            android:textSize="30sp"
-            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button"
@@ -89,7 +67,7 @@
             android:height="100dp"
             android:background="@android:color/holo_green_light"
             android:onClick="onClickDetails"
-            android:text="View Details"
+            android:text="View Student List"
             android:textSize="30sp" />
     </LinearLayout>
 </LinearLayout>

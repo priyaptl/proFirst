@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.parth.profirst" >
+    package="com.example.parth.profirst">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -8,23 +11,27 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme" >
-        <activity android:name=".StudentLogin" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
+        android:theme="@style/AppTheme">
+        <activity android:name=".StudentLogin" />
         <activity android:name=".StudentReg" />
         <activity android:name=".StudentProfile" />
         <activity android:name=".AdminLogin" />
         <activity android:name=".StudentQR" />
         <activity android:name=".StudentDetails" />
         <activity android:name=".Activity1" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Splashscreen" />
+        <activity android:name=".Splashscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"
+                    android:theme="@style/Theme.AppCompat.NoActionBar"/>
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AdminProfile" />
+        <activity android:name=".StudentList"/>
+        <activity android:name="com.example.parth.profirst.MainActivity"/>
+        <activity android:name=".barcode.BarcodeCaptureActivity"/>
+
     </application>
 
 </manifest>

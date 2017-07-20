@@ -31,9 +31,6 @@ public class StudentReg extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.studentreg);
-
-
-
     }
     public void OnClickDBInsert(View view)
     {
