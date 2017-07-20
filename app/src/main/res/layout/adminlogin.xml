@@ -58,21 +58,25 @@
             android:layout_marginTop="15dp"
             android:background="@drawable/admin" />
 
-        <EditText android:layout_width="fill_parent"
+        <EditText
+            android:id="@+id/admin_uname"
+            android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:hint="Username"
-            android:background="#f3f3f3"
-            android:textColor="#f3f3f3"
-            android:paddingLeft="5dp"
             android:layout_marginTop="30dp"
+            android:background="#f3f3f3"
+            android:hint="Username"
+            android:paddingLeft="5dp"
             tools:ignore="HardcodedText,RtlHardcoded,RtlSymmetry" />
 
-        <EditText android:layout_width="fill_parent"
+        <EditText
+            android:id="@+id/admin_pwd"
+            android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:hint="password"
+            android:layout_marginTop="15dp"
             android:background="#f3f3f3"
-            android:paddingLeft="5dp"
-            android:layout_marginTop="15dp"/>
+            android:hint="password"
+            android:inputType="textPassword"
+            android:paddingLeft="5dp" />
 
         <Button
             android:layout_width="190dp"

@@ -24,8 +24,8 @@ public class StudentReg extends AppCompatActivity
 
     public static final String col1 = "ID";
     public static final String col2 = "NAME";
-    public static final String col3 = "EMAIL";
-    public static final String col4 = "CONTACT";
+    public static final String col3 = "PASSWORD";
+    public static final String col4 = "EMAIL";
 
        protected void onCreate(Bundle savedInstanceState)
     {
@@ -40,9 +40,9 @@ public class StudentReg extends AppCompatActivity
         String a = editText.getText().toString();
         editText = (EditText)findViewById(R.id.editEn) ;
         String b = editText.getText().toString();
-        editText = (EditText)findViewById(R.id.editemail) ;
+        editText = (EditText)findViewById(R.id.editpwd) ;
         String c = editText.getText().toString();
-        editText = (EditText)findViewById(R.id.editcon) ;
+        editText = (EditText)findViewById(R.id.editemail) ;
         String d = editText.getText().toString();
         boolean bl=dbh.insertData(a,b,c,d);
 

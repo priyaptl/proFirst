@@ -41,18 +41,18 @@
 
 
         <EditText
-            android:id="@+id/editEn"
+            android:id="@+id/editName"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:ems="10"
             android:hint="Name"
-            android:inputType="textPersonName"
-            />
+            android:inputType="textPersonName" />
 s
+
         <EditText
-            android:id="@+id/editName"
+            android:id="@+id/editEn"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
@@ -62,13 +62,14 @@ s
             android:inputType="textPersonName" />
 
         <EditText
+            android:id="@+id/editpwd"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
             android:ems="10"
-            android:id="@+id/editcon"
-            android:hint="Contact No"/>
+            android:hint="Password"
+            android:inputType="textPassword" />
 
         <EditText
             android:layout_width="match_parent"

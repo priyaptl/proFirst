@@ -59,6 +59,16 @@
         android:layout_weight="0.07">
 
 
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="QR"
+            android:height="100dp"
+            android:background="@android:color/holo_green_light"
+            android:onClick="OnClickQr"
+            android:textSize="30sp"
+            android:layout_marginBottom="5sp"/>
 
         <Button
             android:id="@+id/button"
@@ -69,5 +79,8 @@
             android:onClick="onClickDetails"
             android:text="View Student List"
             android:textSize="30sp" />
+
+
     </LinearLayout>
+
 </LinearLayout>

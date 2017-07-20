@@ -31,6 +31,8 @@
         <activity android:name=".StudentList"/>
         <activity android:name="com.example.parth.profirst.MainActivity"/>
         <activity android:name=".barcode.BarcodeCaptureActivity"/>
+        <activity android:name=".QrMainActivity"/>
+        <activity android:name=".QrActivity"/>
 
     </application>
 
