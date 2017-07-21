@@ -27,11 +27,8 @@ public class LectureActivity extends AppCompatActivity {
 
         Log.i("Attend DB", String.valueOf(c.getCount()));
         TextView temp=(TextView)findViewById(R.id.textView6);
-<<<<<<< HEAD
         temp.setText(c.getString(c.getColumnIndex("ID")));
-=======
         temp.setText(c.getString(c.getColumnIndex("LectID")));
->>>>>>> 39541884c5ecc1f53cf52b364401fd33d888aecc
 
         temp=(TextView)findViewById(R.id.textView4);
         temp.setText(c.getString(c.getColumnIndex("ID")));
