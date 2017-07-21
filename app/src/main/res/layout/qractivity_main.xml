@@ -21,7 +21,7 @@
             android:layout_alignParentTop="true"
             android:ems="10"
             android:inputType="textPersonName"
-            android:hint="Student ID"
+            android:hint="Session ID"
             tools:layout_editor_absoluteX="97dp"
             tools:layout_editor_absoluteY="16dp" />
 

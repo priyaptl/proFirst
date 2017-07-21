@@ -3,7 +3,7 @@
     package="com.example.parth.profirst">
 
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -21,19 +21,20 @@
         <activity android:name=".Activity1" />
         <activity android:name=".Splashscreen">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"
-                    android:theme="@style/Theme.AppCompat.NoActionBar"/>
+                <action
+                    android:name="android.intent.action.MAIN"
+                    android:theme="@style/Theme.AppCompat.NoActionBar" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity android:name=".AdminProfile" />
-        <activity android:name=".StudentList"/>
-        <activity android:name="com.example.parth.profirst.MainActivity"/>
-        <activity android:name=".barcode.BarcodeCaptureActivity"/>
-        <activity android:name=".QrMainActivity"/>
-        <activity android:name=".QrActivity"/>
-
+        <activity android:name=".StudentList" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".barcode.BarcodeCaptureActivity" />
+        <activity android:name=".QrMainActivity" />
+        <activity android:name=".QrActivity" />
+        <activity android:name=".LectureActivity"></activity>
     </application>
 
 </manifest>
