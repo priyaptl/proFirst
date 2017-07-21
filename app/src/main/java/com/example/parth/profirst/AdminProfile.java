@@ -18,4 +18,9 @@ public class AdminProfile extends AppCompatActivity {
         Intent a = new Intent(this,QrMainActivity.class);
         startActivity(a);
     }
+    public void onClickDetails(View view)
+    {
+        Intent a = new Intent(this,LectureActivity.class);
+        startActivity(a);
+    }
 }

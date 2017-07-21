@@ -32,14 +32,14 @@ public class AdminLogin extends AppCompatActivity {
         EditText t2=(EditText) findViewById(R.id.admin_pwd);
 
         Toast toast1=null;
-//        boolean bl=myDb.verify(t1.getText().toString(),t2.getText().toString());
+        boolean bl=myDb.verify(t1.getText().toString(),t2.getText().toString());
         sharedadmin = getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
-        if(true) {
+        if(bl) {
 
             SharedPreferences.Editor editor = sharedadmin.edit();
 
-            editor.putString("NAME", t1.getText().toString());
+            editor.putString("FNAME", t1.getText().toString());
             editor.commit();
             Intent a= new Intent(this,AdminProfile.class);
             startActivity(a);
