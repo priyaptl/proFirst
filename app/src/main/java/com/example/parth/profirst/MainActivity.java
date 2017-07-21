@@ -1,6 +1,9 @@
 package com.example.parth.profirst;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.database.Cursor;
 import android.graphics.Point;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -8,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.common.api.CommonStatusCodes;
 import com.google.android.gms.vision.barcode.Barcode;
@@ -44,6 +48,23 @@ public class MainActivity extends AppCompatActivity {
                     Barcode barcode = data.getParcelableExtra(BarcodeCaptureActivity.BarcodeObject);
                     Point[] p = barcode.cornerPoints;
                     mResultTextView.setText(barcode.displayValue);
+
+                    DatabaseHelperAttend dba=new DatabaseHelperAttend(this);
+                    DatabaseHelper myDb = new DatabaseHelper(this);
+                    String s=null;
+                    SharedPreferences sharedpreferences = getSharedPreferences(StudentLogin.MyPREFERENCES, Context.MODE_PRIVATE);
+                    String name=sharedpreferences.getString("NAME",s);
+
+                    Cursor c = myDb.getReadableDatabase().rawQuery("SELECT * FROM stu_info WHERE name = '"+name+"'", null);
+                    c.moveToNext();
+
+                    String enno = c.getString(c.getColumnIndex("ENNO"));
+                    dba.insertAttend(barcode.displayValue,enno);
+
+                    Toast toast1 = Toast.makeText(this, "Success ", Toast.LENGTH_LONG);
+                    toast1.show();
+
+
                 } else mResultTextView.setText(R.string.no_barcode_captured);
             } else Log.e(LOG_TAG, String.format(getString(R.string.barcode_error_format),
                     CommonStatusCodes.getStatusCodeString(resultCode)));

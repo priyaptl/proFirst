@@ -2,6 +2,7 @@ package com.example.parth.profirst;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -20,18 +21,25 @@ public class QrMainActivity extends AppCompatActivity {
 
     private Button bt;
     private EditText et1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.qractivity_main);
-
+        final DatabaseHelperLect MyDb;
         final Context context =this;
         et1= (EditText) this.findViewById(R.id.editText);
         bt= (Button) this.findViewById(R.id.button);
+        MyDb = new DatabaseHelperLect(this);
         bt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String str= et1.getText().toString();
+                String s="testname";
+                SharedPreferences sharedpreferences = getSharedPreferences(AdminLogin.MyPREFERENCES, Context.MODE_PRIVATE);
+                String name=sharedpreferences.getString("FNAME",s);
+                MyDb.insertData(str,name);
                 MultiFormatWriter multiFormatWriter = new MultiFormatWriter();
                 try {
                     BitMatrix bitMatrix = multiFormatWriter.encode(str, BarcodeFormat.QR_CODE,200,200);

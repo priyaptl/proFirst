@@ -100,21 +100,21 @@ public class DatabaseHelperAdmin extends SQLiteOpenHelper
 //            return true;
 //    }
 
-//    public boolean verify(String s, String s1)
-//    {
-//        Cursor c;
-//        SQLiteDatabase db =this.getWritableDatabase();
-//        String SELECT_SQL = "SELECT * FROM "+tablename1+" where NAME = '"+s+"' and PASSWORD = '"+s1+"'";
-//
-//        c = db.rawQuery(SELECT_SQL, null);
-//        c.moveToFirst();
-//        int i = c.getCount();
-//        c.close();
-//        if(i<=0)
-//             return false;
-//        else
-//            return true;
-//    }
+    public boolean verify(String s, String s1)
+    {
+        Cursor c;
+        SQLiteDatabase db =this.getWritableDatabase();
+        String SELECT_SQL = "SELECT * FROM "+tablename1+" where NAME = '"+s+"' and PASSWORD = '"+s1+"'";
+
+        c = db.rawQuery(SELECT_SQL, null);
+        c.moveToFirst();
+        int i = c.getCount();
+        c.close();
+        if(i<=0)
+             return false;
+        else
+            return true;
+    }
 
 //    public boolean verifyAdmin(String s, String s1)
 //    {

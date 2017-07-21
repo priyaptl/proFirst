@@ -13,18 +13,14 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelperLect extends SQLiteOpenHelper
 {
 
-    public static final String dbname = "admin_db";
-//    public static final String tablename = "admin_info";
-    public static final String tablename1 = "admin_info";
-//
+    public static final String dbname = "lecture_db";
+    public static final String tablename1 = "lectures_info";
     public static final String col1 = "ID";
-    public static final String col2 = "NAME";
-    public static final String col3 = "PASSWORD";
-    public static final String col4 = "EMAIL";
-//    public static final String col5 = "ENNO" ;
+    public static final String col2 = "FacID";
 
 
-    public static final String admin_create="CREATE TABLE "+ tablename1 +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PASSWORD TEXT,EMAIL TEXT);";
+
+    public static final String admin_create="CREATE TABLE "+ tablename1 +" (ID TEXT ,FacID TEXT);";
 
     Context on;
     public DatabaseHelperLect(Context context)
@@ -37,41 +33,25 @@ public class DatabaseHelperLect extends SQLiteOpenHelper
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-//        db.execSQL("CREATE TABLE "+ tablename +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PASSWORD TEXT,EMAIL TEXT,ENNO TEXT);");
-//      db.execSQL("CREATE TABLE "+ tablename1 +" (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PASSWORD TEXT,EMAIL TEXT);");
 
         db.execSQL(admin_create);
-//        insertAdmin();
-        ContentValues contentValues = new ContentValues();
-
-        String a=contentValues.getAsString(col2);
-        System.out.println(a);
-        contentValues.put(col2,"sunil");
-        contentValues.put(col3,"sunil");
-        contentValues.put(col4,"sunil@patel.com");
-        long result =db.insert(tablename1,null,contentValues);
+//        ContentValues contentValues = new ContentValues();
+//
+//        String a=contentValues.getAsString(col2);
+//        System.out.println(a);
+//        contentValues.put(col1,"24");
+//        contentValues.put(col2,"aspff");
+//        long result =db.insert(tablename1,null,contentValues);
 
 
     }
-    public  void insertAdmin()
+    public  void insertData(String id,String Factid)
     {
         SQLiteDatabase db =this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-
-        contentValues.put(col2,"sunil");
-        contentValues.put(col3,"sunil");
-        contentValues.put(col4,"sunil@patel.com");
+        contentValues.put(col1,id);
+        contentValues.put(col2,Factid);
         long result =db.insert(tablename1,null,contentValues);
-
-        contentValues.put(col2,"kirti");
-        contentValues.put(col3,"kirti");
-        contentValues.put(col4,"kirti@tk.com");
-        result =db.insert(tablename1,null,contentValues);
-//
-        contentValues.put(col2,"mosin");
-        contentValues.put(col3,"mosin");
-        contentValues.put(col4,"mosin@patel.com");
-        result =db.insert(tablename1,null,contentValues);
         db.close();
     }
 
@@ -80,54 +60,6 @@ public class DatabaseHelperLect extends SQLiteOpenHelper
         db.execSQL("DROP TABLE IF EXISTS "+tablename1);
     }
 
-//    public boolean insertData(String a,String b,String c,String d)//(String c1,String c2,String c3,String c4)
-//    {
-//        SQLiteDatabase db =this.getWritableDatabase();
-//        ContentValues contentValues = new ContentValues();
 //
-//        contentValues.put(col2,a);
-//        contentValues.put(col5,b);
-//        contentValues.put(col3,c);
-//        contentValues.put(col4,d);
-//        long result =db.insert(tablename,null,contentValues);
-//        db.close();
-//
-//        if(result == -1)
-//            return false;
-//        else
-//            return true;
-//    }
-
-//    public boolean verify(String s, String s1)
-//    {
-//        Cursor c;
-//        SQLiteDatabase db =this.getWritableDatabase();
-//        String SELECT_SQL = "SELECT * FROM "+tablename1+" where NAME = '"+s+"' and PASSWORD = '"+s1+"'";
-//
-//        c = db.rawQuery(SELECT_SQL, null);
-//        c.moveToFirst();
-//        int i = c.getCount();
-//        c.close();
-//        if(i<=0)
-//             return false;
-//        else
-//            return true;
-//    }
-
-//    public boolean verifyAdmin(String s, String s1)
-//    {
-//        Cursor c;
-//        SQLiteDatabase db =this.getWritableDatabase();
-//        String SELECT_SQL = "SELECT * FROM "+tablename1+" where NAME = '"+s+"' and PASSWORD = '"+s1+"'";
-//
-//        c = db.rawQuery(SELECT_SQL, null);
-//        c.moveToFirst();
-//        int i = c.getCount();
-//        c.close();
-//        if(i<=0)
-//            return false;
-//        else
-//            return true;
-//    }
 }
 
